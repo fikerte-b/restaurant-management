@@ -4,7 +4,6 @@
 
 - Login
 - Logout
-- Signup
 
 ## App functions
 
@@ -12,6 +11,10 @@
 
 - Create/Read/Delete/Update meals and meals catagory in the menu
 - Add/Delete employee or active/inactive employee ????
+- List orders under their account
+- Submit/update/delete unpaid customer's order
+- view/details of customer's bill
+- Search bill
 
 ### employee user
 
@@ -22,7 +25,8 @@
 
 ### Special functions
 
-- process payment
+- process payment/ generate bill as pdf
+- unit test for angular
 
 ## Technology
 
