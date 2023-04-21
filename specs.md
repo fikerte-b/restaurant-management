@@ -10,7 +10,6 @@
 ### Manager user
 
 - Create/Read/Delete/Update meals and meals catagory in the menu
-- Add/Delete employee or active/inactive employee ????
 - List orders under their account
 - Submit/update/delete unpaid customer's order
 - view/details of customer's bill
@@ -25,14 +24,14 @@
 
 ### Special functions
 
-- process payment/ generate bill as pdf
-- unit test for angular
+- process payment
+
 
 ## Technology
 
 - Frontend: Angular
 - Backend: NodeJS Express, Mongoose, Cors, bcrypt for hashing, jwt
 - Database: MongoDB
-- Others: Angular material, stripe for payment
+- Others: Angular material, stripe for payment, snack bar
 
-## Deloyment: AWS
+## Deloyment: Heroku

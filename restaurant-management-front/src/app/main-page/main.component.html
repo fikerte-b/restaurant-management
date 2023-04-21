@@ -1,0 +1,44 @@
+<!-- header for all the components in this module -->
+<app-header></app-header>
+
+<mat-sidenav-container autosize>
+  <mat-sidenav #sidenav mode="side" opened="isExpanded">
+    <mat-nav-list>
+      <mat-list-item (click)="isExpanded = !isExpanded">
+        <mat-icon
+          mat-list-icon
+          class="chevron-button"
+          [ngClass]="{ rotated: isExpanded }"
+          >chevron_right
+        </mat-icon>
+      </mat-list-item>
+      <br />
+      <br />
+
+      <mat-list-item [routerLink]="'orders'">
+        <mat-icon mat-list-icon>home</mat-icon>
+        <span *ngIf="isExpanded" class="menu-item">Orders</span>
+      </mat-list-item>
+      <br />
+      <br />
+
+      <mat-list-item [routerLink]="'meals'">
+        <mat-icon mat-list-icon>important_devices</mat-icon>
+        <span *ngIf="isExpanded" class="menu-item">Meals</span>
+      </mat-list-item>
+      <br />
+      <br />
+
+      <mat-list-item [routerLink]="'bills'">
+        <mat-icon mat-list-icon>supervisor_account</mat-icon>
+        <span *ngIf="isExpanded" class="menu-item">Bills</span>
+      </mat-list-item>
+      <br />
+      <br />
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

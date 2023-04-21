@@ -1,0 +1,44 @@
+<mat-card><h1>Meals List</h1></mat-card>
+
+<button mat-raised-button color="primary" class="add" (click)="handleAdd()">
+  Add New Meal
+</button>
+
+<mat-card></mat-card>
+<table class="add">
+  <thead>
+    <tr>
+      <th>Id</th>&nbsp;
+      <th>Name</th>&nbsp;
+      <th>Category</th>&nbsp;
+      <th>Price</th>&nbsp;
+      <th>Ingredients</th>&nbsp;
+    </tr>
+  </thead>&nbsp;
+  <br>
+  
+
+  <tbody>
+    <tr *ngFor="let meal of meals; let i = index">
+      <td>{{ i + 1 }}.</td>&nbsp;
+      <td>{{ meal.name }}</td>&nbsp;
+      <td>{{ meal.category }}</td>&nbsp;
+      <td>{{ meal.price }}</td>&nbsp;&nbsp;
+      <td>{{ meal.ingredients }}</td>&nbsp;&nbsp;
+      <td>
+        <button mat-raised-button color="warn" class="button is-Danger" (click)="handleDelete(meal._id)">
+          Delete
+        </button>
+      </td>
+
+      <td>
+        <button mat-raised-button color="primary"
+          class="button has-text-info is-active"
+          (click)="handleUpdate(meal._id)"
+        >
+          Edit
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
